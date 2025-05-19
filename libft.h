@@ -6,13 +6,14 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 00:12:41 by ktolba            #+#    #+#             */
-/*   Updated: 2025/04/30 00:21:19 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/19 18:16:31 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>

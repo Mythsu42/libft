@@ -6,7 +6,7 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 23:40:10 by ktolba            #+#    #+#             */
-/*   Updated: 2025/04/30 00:08:33 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/19 18:56:35 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,16 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (!dest)
 		return (NULL);
 	while (len_s1 > i)
-		dest[i] = s1[i++];
+	{
+		dest[i] = s1[i];
+		i++;
+	}
 	while (len_s2 > j)
-		dest[i++] = s2[j++];
+	{
+		dest[i] = s2[j];
+		i++;
+		j++;
+	}
 	dest[i] = '\0';
 	return (dest);
 }

@@ -6,13 +6,13 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 07:10:30 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 07:13:00 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/19 17:51:19 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);

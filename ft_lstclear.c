@@ -6,18 +6,18 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 07:13:59 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 07:17:16 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/19 17:49:41 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
 	if (!lst || !del)
-		return;
+		return ;
 	while (*lst)
 	{
 		tmp = (*lst)->next;

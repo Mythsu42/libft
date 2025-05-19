@@ -1,16 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/19 18:04:13 by ktolba            #+#    #+#             */
+/*   Updated: 2025/05/19 18:40:16 by ktolba           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	char	*str;
-	char	*sep;
+	char	sep[2];
 	size_t	i;
 	size_t	j;
 	size_t	k;
 
-	sep = {c,'\0'};
-	str = ft_strtim(s,sep);
+	sep[0] = c;
+	sep[1] = '\0';
+	str = ft_strtrim(s, sep);
 	i = 0;
 	j = 1;
 	k = 0;
@@ -19,7 +32,7 @@ char **ft_split(char const *s, char c)
 		if (str[i] == c)
 			while (str[i] == c)
 				i++;
-			j++;
+		j++;
 		i++;
 	}
 	result = malloc(sizeof(char *) * ++j);
