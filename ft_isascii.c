@@ -6,12 +6,12 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 23:36:43 by ktolba            #+#    #+#             */
-/*   Updated: 2025/04/29 23:36:46 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/20 12:57:21 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

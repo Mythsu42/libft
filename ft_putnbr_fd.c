@@ -6,7 +6,7 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 23:39:28 by ktolba            #+#    #+#             */
-/*   Updated: 2025/04/30 00:05:56 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/24 00:52:56 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	if (nb == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	if (nb < 0)
+	long int	nbr;
+
+	nbr = nb;
+	if (nbr < 0)
 	{
 		write(fd, "-", 1);
-		nb *= -1;
+		nbr *= -1;
 	}
-	if (nb > 9)
-		ft_putnbr_fd(nb / 10, fd);
-	ft_putchar_fd(nb % 10 + '0', fd);
+	if (nbr > 9)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd(nbr % 10 + '0', fd);
 }

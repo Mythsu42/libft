@@ -6,7 +6,7 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 23:38:40 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 19:03:32 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/25 11:09:46 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	if (dest < src)
 	{
 		while (i < n)
@@ -26,10 +28,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
+	{
 		while (n > 0)
 		{
-			--n;
+			n--;
 			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 		}
-	return ((unsigned char *)dest);
+	}
+	return (dest);
 }

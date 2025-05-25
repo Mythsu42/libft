@@ -6,7 +6,7 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:00:50 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 18:42:03 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/25 12:28:57 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
-	size_t	end;
 	size_t	start;
+	size_t	end;
 	size_t	i;
 
-	end = ft_strlen(s1) - 1;
+	start = 0;
+	end = ft_strlen(s1);
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
@@ -27,12 +28,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		if (s1[start] == set[i])
 		{
-			i = 0;
+			i = -1;
 			start++;
 		}
-		if (s1[end] == set[i])
+		if (s1[end - 1] == set[i])
 		{
-			i = 0;
+			i = -1;
 			end--;
 		}
 		i++;
@@ -42,9 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = 0;
 	while (start < end)
-	{
 		result[i++] = s1[start++];
-	}
 	result[i] = '\0';
 	return (result);
 }

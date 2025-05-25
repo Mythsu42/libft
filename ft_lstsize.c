@@ -6,7 +6,7 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:55:17 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 17:46:52 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/24 00:45:13 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst->next != NULL)
+	while (lst)
 	{
 		i++;
 		lst = lst->next;

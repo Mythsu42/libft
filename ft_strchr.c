@@ -6,13 +6,13 @@
 /*   By: ktolba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 23:39:48 by ktolba            #+#    #+#             */
-/*   Updated: 2025/04/30 00:07:12 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/20 15:42:14 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
 
