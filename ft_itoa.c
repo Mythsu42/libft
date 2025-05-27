@@ -49,6 +49,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("0"));
 	nbr = n;
 	len = 0;
+	is_negative = 0;
 	if (nbr < 0)
 	{
 		nbr *= -1;
