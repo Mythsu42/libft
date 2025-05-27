@@ -14,11 +14,8 @@
 
 char	**ft_free(char **result, size_t j)
 {
-	while (j > 0)
-	{
+	while (j--)
 		free(result[j]);
-		j--;
-	}
 	free(result);
 	return (NULL);
 }
@@ -69,6 +66,7 @@ char	**ft_add_words(char **result, const char *str, char sep)
 			j++;
 		}
 	}
+	result[j] = NULL;
 	return (result);
 }
 
