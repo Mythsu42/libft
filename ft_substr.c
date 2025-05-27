@@ -6,7 +6,7 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:50:10 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/19 17:50:34 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/25 18:45:40 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (start >= s_len)
+	if (s_len - start < len)
+		len = s_len - start;
+	if (start >= len)
 		return (ft_calloc(1, 1));
-	result = malloc(sizeof(char) * (len + 1));
+	result = malloc(len - start + 1);
 	if (!result)
 		return (NULL);
 	while (i < len && s[start])

@@ -6,7 +6,7 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:51:39 by ktolba            #+#    #+#             */
-/*   Updated: 2025/05/25 11:06:43 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/05/25 16:35:52 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ char	*ft_write_in_str(char *result, long int nbr, int is_negative, int len)
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		len;
-	int		is_negative;
-	long int			nbr;
+	long int	nbr;
+	int			len;
+	int			is_negative;
+	char		*result;
 
 	if (n == 0)
 		return (ft_strdup("0"));
